@@ -105,12 +105,6 @@ export default function LandingPage() {
               <path fillRule="evenodd" d="M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z" clipRule="evenodd" />
             </svg>
           </Link>
-          <Link
-            to="/analysis"
-            className="inline-flex items-center gap-2 px-8 py-3.5 rounded-xl border border-border bg-surface text-text-heading font-semibold text-base hover:border-accent-border hover:bg-accent-bg transition-all duration-200"
-          >
-            View Demo
-          </Link>
         </div>
 
         {/* Social proof strip */}
