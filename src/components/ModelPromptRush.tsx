@@ -21,9 +21,10 @@ const PROMPT_SNIPPETS = [
 
 interface ModelPromptRushProps {
   companyName: string
+  onComplete?: () => void
 }
 
-export default function ModelPromptRush({ companyName }: ModelPromptRushProps) {
+export default function ModelPromptRush({ companyName, onComplete }: ModelPromptRushProps) {
   const [promptCount, setPromptCount] = useState(0)
   const [snippetIndex, setSnippetIndex] = useState(0)
 
@@ -35,6 +36,7 @@ export default function ModelPromptRush({ companyName }: ModelPromptRushProps) {
         if (prev >= 100) {
           clearInterval(promptTimer)
           clearInterval(snippetTimer)
+          onComplete?.()
           return 100
         }
         return prev + 1

@@ -20,7 +20,6 @@ const DEMO_BASELINE = {
   websiteUrl: 'dell.com',
 }
 const TIMING_MULTIPLIER = 0.35
-const MODEL_PHASE_DURATION_MS = 4600
 
 interface FeedEvent {
   agent: string
@@ -135,12 +134,6 @@ export default function OnboardingPage() {
       setTimeout(() => {
         setStage('models')
       }, elapsed + 500),
-    )
-
-    timeoutIds.push(
-      setTimeout(() => {
-        navigate('/analysis')
-      }, elapsed + 500 + MODEL_PHASE_DURATION_MS),
     )
 
     return () => timeoutIds.forEach(clearTimeout)
@@ -260,7 +253,7 @@ export default function OnboardingPage() {
             : 'opacity-0 translate-y-4 pointer-events-none h-0 overflow-hidden'
         }`}
       >
-        {stage === 'models' && <ModelPromptRush companyName={resolvedCompany} />}
+        {stage === 'models' && <ModelPromptRush companyName={resolvedCompany} onComplete={() => navigate('/analysis')} />}
       </div>
     </div>
   )
