@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState, type FormEvent } from 'react'
+import { useEffect, useMemo, useRef, useState, type FormEvent } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useAuth } from '../context/AuthContext'
 import WebsiteViewer from '../components/WebsiteViewer'
@@ -88,9 +88,13 @@ export default function OnboardingPage() {
     setStage('scan')
   }
 
-  // Run scan + model animation, then navigate to dashboard
+  // Run scan + model animation once, then navigate to dashboard
+  const hasStartedRef = useRef(false)
+
   useEffect(() => {
     if (stage !== 'scan') return
+    if (hasStartedRef.current) return
+    hasStartedRef.current = true
 
     const timeoutIds: ReturnType<typeof setTimeout>[] = []
     let elapsed = 0
@@ -140,7 +144,7 @@ export default function OnboardingPage() {
     )
 
     return () => timeoutIds.forEach(clearTimeout)
-  }, [stage, navigate])
+  }, [stage])
 
   const visibleEvents = useMemo(
     () =>
