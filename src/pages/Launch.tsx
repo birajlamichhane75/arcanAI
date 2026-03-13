@@ -176,8 +176,8 @@ export default function Launch() {
   return (
     <div className="space-y-8 pb-20">
       {/* Header */}
-      <div>
-        <h1 className="text-3xl font-semibold tracking-tight flex items-center gap-3">
+      <div className="text-center">
+        <h1 className="text-3xl font-semibold tracking-tight flex items-center justify-center gap-3">
           <Rocket className="w-8 h-8 text-[#a02468]" />
           Launch Optimizer
         </h1>
@@ -189,7 +189,7 @@ export default function Launch() {
         <motion.div 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          className="bg-surface-alt border border-border rounded-2xl p-6 backdrop-blur-sm max-w-2xl"
+          className="bg-surface-alt border border-border rounded-2xl p-6 backdrop-blur-sm max-w-2xl mx-auto"
         >
           <form onSubmit={startAnalysis} className="space-y-4">
             <div className="space-y-2">
@@ -219,10 +219,10 @@ export default function Launch() {
             <div className="pt-4">
               <button 
                 type="submit"
-                className="w-full bg-[#551138] hover:bg-[#7a1a52] text-text-heading rounded-lg px-6 py-2.5 text-sm font-medium transition-colors flex items-center justify-center gap-2"
+                className="w-full bg-[#551138] hover:bg-[#7a1a52] text-white rounded-lg px-6 py-2.5 text-sm font-medium transition-colors flex items-center justify-center gap-2"
               >
                 <Code2 className="w-4 h-4" />
-                Analyze New Section
+                Analyze New Feature
               </button>
             </div>
           </form>
@@ -380,7 +380,7 @@ export default function Launch() {
                 </button>
                 <button 
                   onClick={startFix}
-                  className="bg-[#551138] hover:bg-[#7a1a52] text-text-heading rounded-lg px-6 py-2.5 text-sm font-medium transition-colors flex items-center gap-2 shadow-[0_0_20px_rgba(85,17,56,0.3)]"
+                  className="bg-[#551138] hover:bg-[#7a1a52] text-white rounded-lg px-6 py-2.5 text-sm font-medium transition-colors flex items-center gap-2 shadow-[0_0_20px_rgba(85,17,56,0.3)]"
                 >
                   <Zap className="w-4 h-4" />
                   Let Our Agent Fix It
@@ -432,7 +432,7 @@ export default function Launch() {
                 <div className="mt-6 flex justify-end">
                   <button 
                     onClick={createPR}
-                    className="bg-[#551138] hover:bg-[#7a1a52] text-text-heading px-6 py-2.5 rounded-lg text-sm font-medium transition-colors flex items-center gap-2 shadow-[0_0_20px_rgba(85,17,56,0.3)]"
+                    className="bg-[#551138] hover:bg-[#7a1a52] text-white px-6 py-2.5 rounded-lg text-sm font-medium transition-colors flex items-center gap-2 shadow-[0_0_20px_rgba(85,17,56,0.3)]"
                   >
                     <GitBranch className="w-4 h-4" />
                     Create Pull Request
@@ -605,7 +605,7 @@ export default function Launch() {
                       {/* Node */}
                       <div className={`w-8 h-8 rounded-full flex items-center justify-center border-2 transition-colors duration-300 ${
                         isSelected
-                          ? "bg-[#551138] border-[#a02468] text-text-heading shadow-[0_0_15px_rgba(85,17,56,0.5)]"
+                          ? "bg-[#551138] border-[#a02468] text-white shadow-[0_0_15px_rgba(85,17,56,0.5)]"
                           : isPast
                             ? "bg-surface-alt border-[#551138]/50 text-[#c73e88]"
                             : "bg-surface-alt border-border text-text/60 group-hover:border-border"
@@ -762,7 +762,7 @@ export default function Launch() {
                 animate={{ opacity: 1 }}
                 className="mt-auto pt-6"
               >
-                <button className="w-full bg-emerald-600 hover:bg-emerald-500 text-text-heading rounded-lg px-4 py-2.5 text-sm font-medium transition-colors flex items-center justify-center gap-2">
+                <button className="w-full bg-emerald-600 hover:bg-emerald-500 text-white rounded-lg px-4 py-2.5 text-sm font-medium transition-colors flex items-center justify-center gap-2">
                   <CheckCircle2 className="w-4 h-4" />
                   Approve & Merge PR
                 </button>
