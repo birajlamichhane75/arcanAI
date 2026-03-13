@@ -20,7 +20,7 @@ import {
 import { REPO_FILES, CHECKPOINTS } from "./LaunchData";
 
 const MINI_SCORES = [
-  { id: "visibility", name: "Visibility", score: 88, color: "bg-violet-500", icon: Eye },
+  { id: "visibility", name: "Visibility", score: 88, color: "bg-[#551138]", icon: Eye },
   { id: "accuracy", name: "Accuracy", score: 92, color: "bg-blue-500", icon: CheckCircle2 },
   { id: "sentiment", name: "Sentiment", score: 85, color: "bg-emerald-500", icon: MessageSquare },
   { id: "freshness", name: "Freshness", score: 95, color: "bg-amber-500", icon: Zap },
@@ -178,7 +178,7 @@ export default function Launch() {
       {/* Header */}
       <div>
         <h1 className="text-3xl font-semibold tracking-tight flex items-center gap-3">
-          <Rocket className="w-8 h-8 text-indigo-400" />
+          <Rocket className="w-8 h-8 text-[#a02468]" />
           Launch Optimizer
         </h1>
         <p className="text-zinc-400 mt-2">Optimize new product sections before they go live.</p>
@@ -200,7 +200,7 @@ export default function Launch() {
                   type="text" 
                   required
                   defaultValue="exampletech-store"
-                  className="w-full bg-zinc-950 border border-zinc-800 rounded-lg pl-10 pr-4 py-2.5 text-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all"
+                  className="w-full bg-zinc-950 border border-zinc-800 rounded-lg pl-10 pr-4 py-2.5 text-sm focus:outline-none focus:border-[#551138] focus:ring-1 focus:ring-[#551138] transition-all"
                 />
               </div>
             </div>
@@ -212,14 +212,14 @@ export default function Launch() {
                   type="text" 
                   required
                   defaultValue="new-gaming-laptops"
-                  className="w-full bg-zinc-950 border border-zinc-800 rounded-lg pl-10 pr-4 py-2.5 text-sm focus:outline-none focus:border-indigo-500 focus:ring-1 focus:ring-indigo-500 transition-all"
+                  className="w-full bg-zinc-950 border border-zinc-800 rounded-lg pl-10 pr-4 py-2.5 text-sm focus:outline-none focus:border-[#551138] focus:ring-1 focus:ring-[#551138] transition-all"
                 />
               </div>
             </div>
             <div className="pt-4">
               <button 
                 type="submit"
-                className="w-full bg-indigo-600 hover:bg-indigo-500 text-white rounded-lg px-6 py-2.5 text-sm font-medium transition-colors flex items-center justify-center gap-2"
+                className="w-full bg-[#551138] hover:bg-[#7a1a52] text-white rounded-lg px-6 py-2.5 text-sm font-medium transition-colors flex items-center justify-center gap-2"
               >
                 <Code2 className="w-4 h-4" />
                 Analyze New Section
@@ -240,7 +240,7 @@ export default function Launch() {
             animate={{ rotate: 360 }}
             transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
           >
-            <Zap className="w-12 h-12 text-indigo-400 mb-6" />
+            <Zap className="w-12 h-12 text-[#a02468] mb-6" />
           </motion.div>
           <h2 className="text-2xl font-semibold mb-2">Analyzing Branch</h2>
           <p className="text-zinc-400">Arcana is scanning the new-gaming-laptops branch for AI readiness...</p>
@@ -256,14 +256,14 @@ export default function Launch() {
         >
           <div className="bg-[#1e1e1e] border border-zinc-800 rounded-2xl p-6 mb-8">
             <h2 className="text-xl font-semibold mb-6 flex items-center gap-2">
-              <Activity className="w-5 h-5 text-indigo-400" />
+              <Activity className="w-5 h-5 text-[#a02468]" />
               Current AI Performance
             </h2>
               
               {/* Score Cards */}
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
                 {[
-                  { label: "Visibility Score", value: currentMetrics.visibility, color: "text-violet-400", border: "border-violet-500/20", bg: "bg-violet-500/5", icon: Eye },
+                  { label: "Visibility Score", value: currentMetrics.visibility, color: "text-[#a02468]", border: "border-[#551138]/20", bg: "bg-[#551138]/5", icon: Eye },
                   { label: "Accuracy Score", value: currentMetrics.accuracy, color: "text-blue-400", border: "border-blue-500/20", bg: "bg-blue-500/5", icon: CheckCircle2 },
                   { label: "Sentiment Score", value: currentMetrics.sentiment, color: "text-emerald-400", border: "border-emerald-500/20", bg: "bg-emerald-500/5", icon: MessageSquare },
                   { label: "Coverage Score", value: currentMetrics.coverage, color: "text-pink-400", border: "border-pink-500/20", bg: "bg-pink-500/5", icon: Activity },
@@ -315,7 +315,7 @@ export default function Launch() {
                     {/* Bars */}
                     <div className="absolute inset-0 flex items-end gap-4 pb-7 px-2">
                       {[
-                        { label: "Visibility", value: currentMetrics.visibility, gradFrom: "#7c3aed", gradTo: "#a78bfa", glow: "rgba(139,92,246,0.4)", text: "#a78bfa" },
+                        { label: "Visibility", value: currentMetrics.visibility, gradFrom: "#3d0c28", gradTo: "#a02468", glow: "rgba(85,17,56,0.4)", text: "#a02468" },
                         { label: "Accuracy",   value: currentMetrics.accuracy,   gradFrom: "#1d4ed8", gradTo: "#60a5fa", glow: "rgba(96,165,250,0.4)",  text: "#60a5fa" },
                         { label: "Sentiment",  value: currentMetrics.sentiment,  gradFrom: "#065f46", gradTo: "#34d399", glow: "rgba(52,211,153,0.4)",  text: "#34d399" },
                         { label: "Coverage",   value: currentMetrics.coverage,   gradFrom: "#9d174d", gradTo: "#f472b6", glow: "rgba(244,114,182,0.4)", text: "#f472b6" },
@@ -380,7 +380,7 @@ export default function Launch() {
                 </button>
                 <button 
                   onClick={startFix}
-                  className="bg-indigo-600 hover:bg-indigo-500 text-white rounded-lg px-6 py-2.5 text-sm font-medium transition-colors flex items-center gap-2 shadow-[0_0_20px_rgba(99,102,241,0.3)]"
+                  className="bg-[#551138] hover:bg-[#7a1a52] text-white rounded-lg px-6 py-2.5 text-sm font-medium transition-colors flex items-center gap-2 shadow-[0_0_20px_rgba(85,17,56,0.3)]"
                 >
                   <Zap className="w-4 h-4" />
                   Let Our Agent Fix It
@@ -393,8 +393,8 @@ export default function Launch() {
           {(launchState === "optimizing" || launchState === "done") && (
             <div className="bg-[#1e1e1e] border border-zinc-800 rounded-2xl p-6 mb-6">
               <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 rounded-full bg-indigo-500/20 flex items-center justify-center">
-                  <Zap className="w-5 h-5 text-indigo-400" />
+                <div className="w-10 h-10 rounded-full bg-[#551138]/20 flex items-center justify-center">
+                  <Zap className="w-5 h-5 text-[#a02468]" />
                 </div>
                 <div>
                   <h2 className="text-lg font-semibold text-white">AI Agent Workspace</h2>
@@ -403,7 +403,7 @@ export default function Launch() {
               </div>
               
               <div className="bg-zinc-950 rounded-xl p-4 border border-zinc-800/50 font-mono text-sm">
-                <div className="flex items-center gap-3 text-indigo-400">
+                <div className="flex items-center gap-3 text-[#a02468]">
                   {aiAgentStep !== "done" ? (
                     <motion.div
                       animate={{ rotate: 360 }}
@@ -432,7 +432,7 @@ export default function Launch() {
                 <div className="mt-6 flex justify-end">
                   <button 
                     onClick={createPR}
-                    className="bg-indigo-600 hover:bg-indigo-500 text-white px-6 py-2.5 rounded-lg text-sm font-medium transition-colors flex items-center gap-2 shadow-[0_0_20px_rgba(99,102,241,0.3)]"
+                    className="bg-[#551138] hover:bg-[#7a1a52] text-white px-6 py-2.5 rounded-lg text-sm font-medium transition-colors flex items-center gap-2 shadow-[0_0_20px_rgba(85,17,56,0.3)]"
                   >
                     <GitBranch className="w-4 h-4" />
                     Create Pull Request
@@ -446,8 +446,8 @@ export default function Launch() {
           {(prState !== "none" && prState !== "ready") && (
             <div className="bg-[#1e1e1e] border border-zinc-800 rounded-2xl p-6 mb-6">
               <div className="flex items-center gap-3 mb-6">
-                <div className="w-10 h-10 rounded-full bg-indigo-500/20 flex items-center justify-center">
-                  <GitBranch className="w-5 h-5 text-indigo-400" />
+                <div className="w-10 h-10 rounded-full bg-[#551138]/20 flex items-center justify-center">
+                  <GitBranch className="w-5 h-5 text-[#a02468]" />
                 </div>
                 <div>
                   <h2 className="text-lg font-semibold text-white">Pull Request</h2>
@@ -461,7 +461,7 @@ export default function Launch() {
                     animate={{ rotate: 360 }}
                     transition={{ duration: 2, repeat: Infinity, ease: "linear" }}
                   >
-                    <Zap className="w-4 h-4 text-indigo-400" />
+                    <Zap className="w-4 h-4 text-[#a02468]" />
                   </motion.div>
                   Creating Pull Request...
                 </div>
@@ -472,9 +472,9 @@ export default function Launch() {
                   initial={{ opacity: 0, y: 8 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.4 }}
-                  className="flex items-center gap-3 bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 p-4 rounded-xl text-sm"
+                  className="flex items-center gap-3 bg-[#551138]/10 border border-[#551138]/20 text-[#c73e88] p-4 rounded-xl text-sm"
                 >
-                  <CheckCircle2 className="w-5 h-5 text-indigo-400 shrink-0" />
+                  <CheckCircle2 className="w-5 h-5 text-[#a02468] shrink-0" />
                   Pull request created successfully.
                 </motion.div>
               )}
@@ -507,7 +507,7 @@ export default function Launch() {
                                 key={j}
                                 onClick={() => setSelectedFile(path)}
                                 className={`flex items-center gap-2 px-2 py-1.5 text-sm rounded cursor-pointer transition-colors ${
-                                  isSelected ? "bg-indigo-500/20 text-indigo-300" : "text-zinc-400 hover:bg-zinc-800/50 hover:text-zinc-300"
+                                  isSelected ? "bg-[#551138]/20 text-[#c73e88]" : "text-zinc-400 hover:bg-zinc-800/50 hover:text-zinc-300"
                                 }`}
                               >
                                 <FileCode className="w-4 h-4 opacity-70" />
@@ -521,7 +521,7 @@ export default function Launch() {
                       <div 
                         onClick={() => setSelectedFile(item.name)}
                         className={`flex items-center gap-2 px-2 py-1.5 text-sm rounded cursor-pointer transition-colors ${
-                          selectedFile === item.name ? "bg-indigo-500/20 text-indigo-300" : "text-zinc-400 hover:bg-zinc-800/50 hover:text-zinc-300"
+                          selectedFile === item.name ? "bg-[#551138]/20 text-[#c73e88]" : "text-zinc-400 hover:bg-zinc-800/50 hover:text-zinc-300"
                         }`}
                       >
                         <FileCode className="w-4 h-4 opacity-70" />
@@ -562,7 +562,7 @@ export default function Launch() {
                 {launchState === "comparison" && (
                   <div className="absolute inset-0 top-12 bg-zinc-950/80 backdrop-blur-sm flex items-center justify-center z-10">
                     <div className="text-center">
-                      <Zap className="w-8 h-8 text-indigo-400 mx-auto mb-3" />
+                      <Zap className="w-8 h-8 text-[#a02468] mx-auto mb-3" />
                       <p className="text-zinc-300 font-medium">Ready to optimize</p>
                     </div>
                   </div>
@@ -582,7 +582,7 @@ export default function Launch() {
           {/* Repository Optimization Timeline */}
           <div className="mt-12">
             <h2 className="text-xl font-semibold text-white mb-6 flex items-center gap-2">
-              <GitBranch className="w-5 h-5 text-indigo-400" />
+              <GitBranch className="w-5 h-5 text-[#a02468]" />
               Repository Optimization Timeline
             </h2>
             
@@ -605,9 +605,9 @@ export default function Launch() {
                       {/* Node */}
                       <div className={`w-8 h-8 rounded-full flex items-center justify-center border-2 transition-colors duration-300 ${
                         isSelected 
-                          ? "bg-indigo-500 border-indigo-400 text-white shadow-[0_0_15px_rgba(99,102,241,0.5)]" 
+                          ? "bg-[#551138] border-[#a02468] text-white shadow-[0_0_15px_rgba(85,17,56,0.5)]" 
                           : isPast
-                            ? "bg-zinc-800 border-indigo-500/50 text-indigo-300"
+                            ? "bg-zinc-800 border-[#551138]/50 text-[#c73e88]"
                             : "bg-zinc-900 border-zinc-700 text-zinc-500 group-hover:border-zinc-500"
                       }`}>
                         {isSelected ? <CheckCircle2 className="w-4 h-4" /> : <span className="text-xs font-medium">{index + 1}</span>}
@@ -616,7 +616,7 @@ export default function Launch() {
                       {/* Label */}
                       <div className="mt-3 text-center w-32">
                         <p className={`text-xs font-medium transition-colors ${
-                          isSelected ? "text-indigo-300" : isPast ? "text-zinc-300" : "text-zinc-500 group-hover:text-zinc-400"
+                          isSelected ? "text-[#c73e88]" : isPast ? "text-zinc-300" : "text-zinc-500 group-hover:text-zinc-400"
                         }`}>
                           {checkpoint.name}
                         </p>
@@ -675,7 +675,7 @@ export default function Launch() {
                       onClick={() => {
                         alert(`Restoring snapshot: ${CHECKPOINTS.find(c => c.id === selectedCheckpoint)?.name}`);
                       }}
-                      className="px-4 py-2 bg-indigo-500/10 hover:bg-indigo-500/20 text-indigo-400 text-sm font-medium rounded-lg transition-colors border border-indigo-500/20 flex items-center gap-2"
+                      className="px-4 py-2 bg-[#551138]/10 hover:bg-[#7a1a52]/20 text-[#a02468] text-sm font-medium rounded-lg transition-colors border border-[#551138]/20 flex items-center gap-2"
                     >
                       <GitBranch className="w-4 h-4" />
                       Restore Snapshot
@@ -711,7 +711,7 @@ export default function Launch() {
                     className="flex gap-2 text-zinc-400"
                   >
                     <span className="text-zinc-600">[{new Date().toLocaleTimeString()}]</span>
-                    <span className="text-indigo-400">{log}</span>
+                    <span className="text-[#a02468]">{log}</span>
                   </motion.div>
                 ))}
               </AnimatePresence>
@@ -719,7 +719,7 @@ export default function Launch() {
                 <motion.div 
                   animate={{ opacity: [1, 0.5, 1] }}
                   transition={{ duration: 1, repeat: Infinity }}
-                  className="w-2 h-4 bg-indigo-500"
+                  className="w-2 h-4 bg-[#551138]"
                 />
               )}
             </div>
@@ -791,7 +791,7 @@ export default function Launch() {
             <div className="p-6 overflow-y-auto space-y-8">
               {/* Visibility */}
               <div className="space-y-3">
-                <h3 className="text-lg font-semibold text-violet-400 flex items-center gap-2">
+                <h3 className="text-lg font-semibold text-[#a02468] flex items-center gap-2">
                   <Eye className="w-5 h-5" /> Visibility Guidance
                 </h3>
                 <p className="text-zinc-300 text-sm leading-relaxed">
